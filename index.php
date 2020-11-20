@@ -1,28 +1,28 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
-// session_start();
+session_start();
 
-// // $response = file_get_contents('https://reqres.in/api/users/');
+$response = file_get_contents('https://reqres.in/api/users/');
 
-// // echo $response;
+echo $response;
 
-// // $json = json_decode($response);
+$json = json_decode($response);
 
-// // foreach( $json->data as $key => $value) {
-//     // echo $value->email; 
-// // }
+foreach( $json->data as $key => $value) {
+    echo $value->email; 
+}
 
 
 // $checkfor = ([
-//     'email'=>'ajithrockers007@gmail.com',
-//     'password'=>'ajithsss'
+    // 'email'=>'ajithrockers007@gmail.com',
+    // 'password'=>'ajithsss'
 // ]);
 
 // // $checkforJson = json_encode($checkfor);
 // // //echo $checkforJson;
 
-//   // kvstore API url
+  // // kvstore API url
 // $url = 'http://127.0.0.1:8000/api/details';
 // // Collection object
 
@@ -36,8 +36,8 @@ header('Access-Control-Allow-Origin: *');
 // curl_setopt($curl, CURLOPT_POSTFIELDS,  json_encode($checkfor));
 // // Set custom headers for RapidAPI Auth and Content-Type header
 // curl_setopt($curl, CURLOPT_HTTPHEADER, [
-//   'X-RapidAPI-Host: http://127.0.0.1:8000',
-//   'Content-Type: application/json'
+  // 'X-RapidAPI-Host: http://127.0.0.1:8000',
+  // 'Content-Type: application/json'
 // ]);
 // // Execute cURL request with all previous settings
 // $response = curl_exec($curl);
@@ -51,7 +51,7 @@ header('Access-Control-Allow-Origin: *');
 
 // $_SESSION["token"] = $json->success->token;
 
-echo "working";
+
 
 
 ?>
