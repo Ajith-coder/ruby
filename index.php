@@ -7,11 +7,11 @@ $response = file_get_contents('https://reqres.in/api/users/');
 
 echo $response;
 
-$json = json_decode($response);
+// $json = json_decode($response);
 
-foreach( $json->data as $key => $value) {
-    echo $value->email; 
-}
+// foreach( $json->data as $key => $value) {
+//     echo $value->email; 
+// }
 
 
 // $checkfor = ([
